@@ -1,9 +1,16 @@
-<script setup></script>
-
 <template>
-  <h1>Hello Vue.js</h1>
+  <div class="wrapper">
+    <hero-view />
+    <footer-component />
+  </div>
 </template>
 
-<style scoped>
+<script>
+import HeroView from "@/views/HeroView.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
+export default {
+  components: { HeroView, FooterComponent },
+};
+</script>
 
-</style>
+<style scoped></style>
