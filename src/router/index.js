@@ -2,16 +2,16 @@ import { createWebHistory, createRouter } from "vue-router";
 
 import HeroView from "@/views/HeroView.vue";
 import OurCoffeeView from "@/views/OurCoffeeView.vue";
-import GoodsView from "@/views/GoodsView.vue";
-import ContactsView from "@/views/ContactsView.vue";
-import ThanksView from "@/views/ThanksView.vue";
+import ForYourPleasureView from "@/views/ForYourPleasureView.vue";
+import ContactUsView from "@/views/ContactUsView.vue";
+import ThankYouView from "@/views/ThankYouView.vue";
 
 const routes = [
   { path: "/", component: HeroView },
-  { path: "/coffee", component: OurCoffeeView },
-  { path: "/goods", component: GoodsView },
-  { path: "/contacts", component: ContactsView },
-  { path: "/thanks", component: ThanksView },
+  { path: "/our-coffee", component: OurCoffeeView },
+  { path: "/for-your-pleasure", component: ForYourPleasureView },
+  { path: "/contact-us", component: ContactUsView },
+  { path: "/thank-you", component: ThankYouView },
 ];
 
 const router = createRouter({

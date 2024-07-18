@@ -3,24 +3,35 @@
     <ul
       class="header d-flex justify-content-center justify-content-md-start flex-wrap"
     >
-      <li class="header__item">
-        <RouterLink to="/"
-          ><img src="@/assets/logo/Logo.svg" alt="logo"
-        /></RouterLink>
-      </li>
-      <li class="header__item">
-        <RouterLink to="/coffee">Our coffee</RouterLink>
-      </li>
-      <li class="header__item">
-        <RouterLink to="/goods">For your pleasure</RouterLink>
-      </li>
-      <li class="header__item">
-        <RouterLink to="/contacts">Contact us</RouterLink>
+      <li v-for="link in links" :key="link.id" class="header__item">
+        <RouterLink :to="link.link">
+          <template v-if="link.icon">
+            <img :src="link.icon" :alt="link.icon" />
+          </template>
+          <template v-else>
+            {{ link.text }}
+          </template>
+        </RouterLink>
       </li>
     </ul>
   </header>
 </template>
 
-<script></script>
+<script>
+import Logo from "@/assets/logo/Logo.svg";
+
+export default {
+  data() {
+    return {
+      links: [
+        { id: 0, link: "/", icon: Logo },
+        { id: 1, text: "Our coffee", link: "/our-coffee" },
+        { id: 2, text: "For your pleasure", link: "/for-your-pleasure" },
+        { id: 3, text: "Contact us", link: "/contact-us" },
+      ],
+    };
+  },
+};
+</script>
 
 <style scoped lang="scss"></style>
