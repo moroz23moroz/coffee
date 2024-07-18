@@ -4,19 +4,23 @@
       class="header d-flex justify-content-center justify-content-md-start flex-wrap"
     >
       <li class="header__item">
-        <a href="./index.html">
-          <img src="@/assets/logo/Logo.svg" alt="logo" />
-        </a>
+        <RouterLink to="/"
+          ><img src="@/assets/logo/Logo.svg" alt="logo"
+        /></RouterLink>
       </li>
       <li class="header__item">
-        <a href="./coffeepage.html">Our coffee</a>
+        <RouterLink to="/coffee">Our coffee</RouterLink>
       </li>
       <li class="header__item">
-        <a href="./goodspage.html">For your pleasure</a>
+        <RouterLink to="/goods">For your pleasure</RouterLink>
       </li>
       <li class="header__item">
-        <a href="./contacts.html">Contact us</a>
+        <RouterLink to="/contacts">Contact us</RouterLink>
       </li>
     </ul>
   </header>
 </template>
+
+<script></script>
+
+<style scoped lang="scss"></style>
